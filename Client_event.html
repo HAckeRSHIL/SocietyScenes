@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Client Complaint Registration Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-color: #DCDCDC;
+
+        }
+
+        .intro {
+            margin: 10px;
+            outline: 1px solid #CCC;
+            height: auto;
+            overflow: auto;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #2F4F4F;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .formclass{
+            position: absolute;
+            align-content: center;
+            align-items: center;
+            margin-left: 15%;
+            margin-right: 10%;
+            margin-top: 5%;
+            width: 70%;
+            opacity: 90%;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+    
+    
+    
+<!--    NEW STYLE         -->
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg- navbar-dark" style="background-color: #2F4F4F; ">
+        <!-- Brand/logo -->
+
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <a href="#">About</a>
+            <a href="#">Pay Bills</a>
+            <a href="#">Notice Board</a>
+            <a href="#">Events</a>
+            <a href="#">Chat/Forum</a>
+            <a href="#">Complain Box</a>
+            <a href="#">My Profile</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer;color: white" onclick="openNav()">&#9776;</span>
+
+        <div class="container-fluid">
+            <div class="row" id="heading">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3 col-sm-offset-6">
+                    <a class="navbar-brand" href="#">My Society</a>
+                </div>
+            </div>
+            <div style="float: right;">
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Logout</button>
+            </div>
+            <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Logout <i class="fa fa-lock"></i></h4>
+                        </div>
+                        <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+                        <div class="modal-footer"><a href="javascript:;" class="btn btn-info">Logout</a><a href="javascript:;" class="btn btn-secondary ">Cancel</a></div></div></div>
+                    </div>
+                </div>
+            
+            <!-- Links -->
+    </nav>
+    <div id="main">
+
+        <div class="formclass">
+        <div class="jumbotron">
+        <div class="container-fluid">
+            
+            
+        
+        <h2><center>Event Form</center></h2>
+        <form action="/action_page.php" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="name"><b>Full name:</b></label>
+            <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+            
+        <div class="form-group">
+            <label for="Event name"><b>Event name:</b></label>
+            <input type="text" class="form-control" id="ename" placeholder="Enter event name" name="ename" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+            
+        <div class="form-group">    
+            <label for="ComplaintDetails"><b>Event Description</b></label>         
+            <textarea class="form-control" rows="5" id="eventDetail" placeholder="Eg. navratri celebration " name="edes"></textarea>
+        </div>
+            
+        <div class="form-group">    
+            <label for="date"><b>Starting Date of the event</b></label>
+            <input type="date" class="form-control" placeholder="dd-mm-yy" required name="sdate">
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+            
+        <div class="form-group">
+            <label for="time"><b>Starting time of the event</b></label>
+            <input type="time" class="form-control" placeholder="enter starting time" required name="estime">
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+            
+         <div class="form-group">    
+            <label for="date"><b>Ending Date of the event</b></label>
+            <input type="date" class="form-control" placeholder="dd-mm-yy" required name="edate">
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+            
+        <div class="form-group">
+            <label for="time"><b>Ending time of the event</b></label>
+            <input type="time" class="form-control" placeholder="enter ending time" required name="eetime">
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+            
+        <div class="form-group">    
+            <label for="IncidentLocation"><b>Required Location</b></label>
+            <br>
+            <input type="text" class="form-control" name="incidentLocation" placeholder="Eg. Near A block" required>
+            <div class="valid-feedback">Valid.</div>
+            <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        
+        
+        <center><button type="submit" class="btn btn-primary">Submit</button></center>
+        </form>
+        </div>
+        </div>    
+        
+        </div>
+    </div>
+        <script>
+            function openNav() {
+                document.getElementById("heading").style.marginLeft = "200px";
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("main2").style.marginLeft = "250px";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
+
+            function closeNav() {
+                document.getElementById("heading").style.marginLeft = "0";
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+            
+                    // Disable form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+        </body>
+</html>

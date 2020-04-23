@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Client Event Page</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>    
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #DCDCDC;
+    
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2F4F4F;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.container{
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    text-align: center;
+}
+    
+.container h2{
+    text-align: center;
+}
+.table {
+   margin: auto;
+   width: 70% !important; 
+}
+.cors{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    background-color: darkgrey;
+}
+
+.card{
+    width: auto;
+    margin-left: 10px;
+    float: left;
+}
+    
+</style>
+</head>
+<body >
+<!--<div class="jumbotron">-->
+    
+    <nav class="navbar navbar-expand-sm bg- navbar-dark" style="background-color: #2F4F4F; ">
+  <!-- Brand/logo -->
+  <div class="row">      
+  <div class="col-sm-3">
+      <center><a class="navbar-brand" href="#"  >My Society</a></center>
+  </div>
+        </div>
+    <div style="padding-left: 75%">    
+        <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm" >Logout</button>
+        </div>
+            <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header"><h4>Logout <i class="fa fa-lock"></i></h4></div>
+                    <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+                <div class="modal-footer"><a href="javascript:;" class="btn btn-primary btn-block">YES</a></div>        
+                <div class="modal-footer"><a href="javascript:;" class="btn btn-primary btn-block">NO</a></div>   
+            </div>
+        </div>
+    </div>
+        
+        <!-- Links -->
+  </nav>
+    
+    
+    
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<div id="main">
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+<div class="cors">   
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="Diwali-For-Kids.jpg" alt="Diwali Event">
+    </div>
+    <div class="carousel-item">
+      <img src="holi-pic.png" alt="Holi Event">
+    </div>
+    <div class="carousel-item">
+      <img src="cristmas-kids.jpg" alt="Cristmas Pics Event">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+</div> 
+<br>
+
+<div class="container">
+    <div class="jumbotron">
+    <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="Diwali-For-Kids.jpg" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+        <br>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="holi-pic.png" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="jumbotron">
+    <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="Diwali-For-Kids.jpg" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+        <br>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="holi-pic.png" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+<br><div class="container">
+    <div class="jumbotron">
+    <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="Diwali-For-Kids.jpg" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+        <br>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="holi-pic.png" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+<br><div class="container">
+    <div class="jumbotron">
+    <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="Diwali-For-Kids.jpg" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+        <br>
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="holi-pic.png" alt="Card image" style="width:100%" alt="Events Details">
+        <div class="card-body">
+            <h4 class="card-title">Event Name</h4>
+            <p class="card-text">Some example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineerSome example text some example text. John Doe is an architect and engineer</p>
+            <h5>Event Organizer: Kumar Shanu</h5>
+        </div>
+    </div>
+    </div>
+    </div>
+</div>
+<br>    
+
+    
+    
+    
+</div>
+<script>
+    function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+  
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+<!--</div>-->
+</body>
+</html>

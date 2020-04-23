@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href=" https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+      
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+
+   <style>
+        body {
+            font-family: "Lato", sans-serif;
+            background-color: #DCDCDC;
+
+        }
+
+        .intro {
+            margin: 10px;
+            outline: 1px solid #CCC;
+            height: auto;
+            overflow: auto;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #2F4F4F;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-sm bg- navbar-dark" style="background-color: #2F4F4F; ">
+        <!-- Brand/logo -->
+
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+            <a href="#">About</a>
+            <a href="#">Pay Bills</a>
+            <a href="#">Notice Board</a>
+            <a href="#">Events</a>
+            <a href="#">Chat/Forum</a>
+            <a href="#">Complain Box</a>
+            <a href="#">My Profile</a>
+        </div>
+
+        <span style="font-size:30px;cursor:pointer;color: white" onclick="openNav()">&#9776;</span>
+
+        <div class="container-fluid">
+            <div class="row" id="heading">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3 col-sm-offset-6">
+                    <a class="navbar-brand" href="#">My Society</a>
+                </div>
+            </div>
+            <div style="float: right;">
+                <button class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Logout</button>
+            </div>
+            <div class="modal bs-example-modal-sm" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>Logout <i class="fa fa-lock"></i></h4>
+                        </div>
+                        <div class="modal-body"><i class="fa fa-question-circle"></i> Are you sure you want to log-off?</div>
+                        <div class="modal-footer"><a href="javascript:;" class="btn btn-primary btn-block">Logout</a></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links -->
+    </nav>
+	<div class="row">
+		<div class="col-sm-12" style=" height:50px; ">
+			
+			
+			
+		</div>
+		
+    </div>
+	
+	<div class="row">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+		
+		
+
+			<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Block No</th>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>View</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventviewmodal">  View </button></td>
+            
+            </tr>
+            <tr>
+                <td>Brielle Williamson</td>
+                <td>Integration Specialist</td>
+                <td>New York</td>
+                
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventviewmodal">  View </button></td>
+            
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventviewmodal">  View </button></td>
+            
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventviewmodal">  View </button></td>
+            
+            </tr>
+            <tr>
+                <td>Brielle Williamson</td>
+                <td>Integration Specialist</td>
+                <td>New York</td>
+                
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventviewmodal">  View </button></td>
+            
+            </tr>
+            <tr>
+                <td>Airi Satou</td>
+                <td>Accountant</td>
+                <td>Tokyo</td>
+                <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eventviewmodal">  View </button></td>
+            
+            </tr>
+            
+            
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Block No</th>
+                <th>Event Name</th>
+                <th>Date</th>
+                <th>View</th>
+                
+            </tr>
+        </tfoot>
+    </table>
+
+		
+			
+		</div>
+		<div class="col-sm-2"></div>
+    </div>
+	
+	<div class="modal" id="eventviewmodal">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Event Request</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body" style="font-family: verdana;">
+        <b style="font-size: 20px;">Title</b> <br>
+           <span style="font-size: 18px;"> Birthday Party of my son Suresh</span>
+        <hr>
+          <table>
+            <tr>
+                <td><p><b style="font-family:Verdana;">Name</b></p></td> 
+                <td><p style="font-size: 13px">: XYZ Patel</p></td>
+            </tr>
+          <tr>
+                <td><p><b style="font-family:Verdana;">Block No.</b></p></td>  
+                <td><p style="font-size: 13px">: A-101</p></td>
+            </tr>
+              <tr>
+                <td><p><b style="font-family:Verdana;">Starting date</b></p></td>     
+                <td><p style="font-size: 13px">: 21/02/2019</p></td>
+            </tr>
+              <tr>
+                  <td><p><b style="font-family:Verdana;">Ending date</b></p></td>   
+                <td><p style="font-size: 13px">: 22/02/2020</p></td>
+            </tr>
+              <tr>
+                <td><p><b style="font-family:Verdana;">Time</b></p></td>      
+                <td><p style="font-size: 13px">: 6:00 P.M. to 12:00 P.M.</p></td>
+            </tr>
+            <tr>
+                <td><p><b style="font-family:Verdana;">Location</b></p></td>      
+                <td><p style="font-size: 13px">: Hall A</p></td>
+            </tr>
+          </table>
+          <hr><b>Description</b> <br>
+       Living in a housing society is akin to being in a committed relationship, except it gets murkier when things go awry as they sometimes do. We’ve all been in catch 22 situations where if a problem persists, we are damned if we try to solve it and damned if we don’t. After all, it is better to resolve a conflict or dispute peacefully in a way that is acceptable to both parties. This post covers the different problems that may arise for members in a housing society and various ways for redressal.
+    
+       <hr><b>Additional Requirements</b> <br>
+       Living in a housing society is akin to being in a committed relationship, except it gets murkier when things go awry as they sometimes do. We’ve all been in catch 22 situations where if a problem persists, we are damned if we try to solve it and damned if we don’t. After all, it is better to resolve a conflict or dispute peacefully in a way that is acceptable to both parties. This post covers the different problems that may arise for members in a housing society and various ways for redressal.
+       <hr> 
+         <b>Reply</b><br>
+          <form>
+          <textarea class="form-control" name="replymsg" rows="5" col="20"></textarea>
+          <br>
+          <button type="submit" class="btn btn-primary float-right">Send</button>
+              </form>
+        </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+          <button type="button" class="btn btn-success" >Accept</button>
+          <button type="button" class="btn btn-danger" >Reject</button>
+          <button class="btn btn-secondary" type="button" data-dismiss="modal" >Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+	
+	
+	
+    <div id="main">
+
+        <script>
+            function openNav() {
+                document.getElementById("heading").style.marginLeft = "200px";
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+                document.getElementById("main2").style.marginLeft = "250px";
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("openNav").style.display = 'none';
+            }
+
+            function closeNav() {
+                document.getElementById("heading").style.marginLeft = "0";
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0%";
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("openNav").style.display = "inline-block";
+            }
+			
+			$(document).ready(function() {
+				var table = $('#example').DataTable();
+			 
+				$('#example tbody').on( 'click', 'tr', function () {
+					if ( $(this).hasClass('selected') ) {
+						$(this).removeClass('selected');
+					}
+					else {
+						table.$('tr.selected').removeClass('selected');
+						$(this).addClass('selected');
+					}
+				} );
+			 
+				$('#button').click( function () {
+					table.row('.selected').remove().draw( false );
+				} );
+			} );
+			
+        </script>
+		</div>
+		</body>
+		</html>
