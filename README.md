@@ -6,6 +6,7 @@ Online Web Application to automate all the tedious and monotonous work being don
 * Staff Management
 * Chat/Forum
 * Dynamic Parking slot allotment
+* Manage Resident & Tenants roles
 * Complain Box
 * Lost & Found
 * Know Your Neighbours
