@@ -19,7 +19,7 @@ Online Web Application to automate all the tedious and monotonous work being don
 * Donate to needy (Collection of donation for several tasks)
 * Complain box visualization on society map
 
-## Screenshots
+## Snapshots
 <img src="Screenshots/Features of SS.png">
 <img src="Screenshots/Dashboard of SS.png">
 <img src="Screenshots/client payment history of SS.png">
