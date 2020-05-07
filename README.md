@@ -20,4 +20,4 @@ Online Web Application to automate all the tedious and monotonous work being don
 * Complain box visualization on society map
 
 ## Screenshots
-<a href="https://ibb.co/sF2DJQh"><img src="https://i.ibb.co/khxr60p/Features-of-SS.png" alt="Features-of-SS" border="0"></a>
+
